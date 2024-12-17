@@ -3,41 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d64b139500.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-        <nav class="navbar">
-            <a href="#" style="--i:1"class="active">Home</a>
-            <a href="#" style="--i:2">About</a>
-            <a href="#" style="--i:3">Skill</a>
-            <a href="#" style="--i:4">Portfolio</a>
-            <a href="#" style="--i:5">Contact</a>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logonew.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closeMenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
         </nav>
-    </header>
-    <section class="home">
-        <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Sree</h1>
-            <h3>I'am a <span class="text"></span></h3>
-            <p>I'm a web designer with extenisive experience for over 3 years.
-                <br>expertise is to create and website design, development and Frontend design.</p>
-            <div class="home-sci">
-                <a href="#" style="--i:7"><i class='bx bxl-gmail'></i></a>
-                <a href="#" style="--i:8"><i class='bx bxl-facebook'></i></a>
-                <a href="#" style="--i:9"><i class='bx bxl-instagram'></i></a>
-                <a href="#" style="--i:10"><i class='bx bxl-github'></i></a>
-                <a href="#" style="--i:11"><i class='bx bxl-discord-alt'></i></a>
-                <a href="#" style="--i:12"><i class='bx bxl-linkedin'></i></a>
-                <a href="#" style="--i:13"><i class='bx bxl-stack-overflow'></i></a>
-            </div>
-            <a href="#" class="btn-box">More about me</a>
+        <div class="header-text">
+            <p>UI/UX Designer</p>
+            <h1>Hi, I'm <span><br>Pavithra Madhusoodhanan</span><br> From India</h1>
         </div>
-    </section>
-    <script src="main.js"></script>
+    </div>
+</div>
+<!-- about -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/pavi1.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    <br>I am a passionate and driven B.Tech Computer Science student at the College of Engineering Attingal, with a strong inclination toward innovation, collaborative learning, and impactful problem-solving. My journey in computer science has been fueled by a solid foundation in <b>Java programming</b> and a deep curiosity to explore and build creative solutions to real-world challenges. I firmly believe in lifelong learning and the power of technology to drive change.
+                    <br><br><b>Professional & Community Involvement</b>
+                    <br>I actively contribute to the <b>Free and Open Source Software(FOSS)</b> community as a dedicated volunteer. This role has allowed me to give back to the open-source ecosystem, learn from experienced developers, and refine my technical and collaboration skills. In addition, I hold an executive position at <b>Train303</b>, an AI-focused student community where I engage with like-minded peers and mentors. Through this role, I’ve been able to broaden my knowledge in artificial intelligence, machine learning, and collaborative software development while facilitating events, discussions, and projects that drive innovation.
+
+                    <br><br><b>Active Participation in Hackathons, Projects, & Coding Competitions</b>
+                    <br>My active participation in hackathons, coding competitions, and hands-on development projects has been pivotal in honing my technical abilities and problem-solving skills. These experiences have taught me the importance of teamwork, adaptability, and perseverance in achieving project goals. Whether it’s brainstorming solutions, debugging complex code, or presenting ideas, I approach each challenge with a methodical mindset, creativity, and unwavering dedication.
+
+                    <br><br><b>Core Values & Skillset</b>
+                    <br>I value meticulous planning, hard work, and innovation, qualities that I bring to every project or collaboration. I am proficient in Java and continuously strive to expand my technical expertise by learning new programming languages, frameworks, and tools. My strong analytical skills and problem-solving mindset empower me to approach tasks with clarity and deliver effective solutions.
+
+                    <br><br><b>Growth & Learning</b>
+                    <br>I am driven by a desire to stay at the forefront of emerging technologies. Actively seeking out opportunities to upskill, I regularly participate in challenging coding competitions, online courses, and industry-related workshops. I also enjoy networking and engaging with professionals and experts in the tech industry to gain insights, exchange ideas, and stay updated on the latest trends and innovations.
+
+                    <br><br><b>Beyond Technology</b>
+                    <br>Outside of my technical pursuits, I have a keen interest in reading. Books are a constant source of inspiration, fueling my curiosity and helping me stay informed across diverse fields. Reading allows me to expand my perspective, enhance my critical thinking skills, and stay motivated to tackle challenges with a fresh outlook.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX Designer</span><br>Designing UI for web and mobile apps</li>
+                        <li><span>Web development</span><br>Web app development</li>
+                        <li><span>App Development</span><br>Building Android apps</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024</span><br>Won Hacakthons</li>
+                        <li><span>2024-ongoing</span><br>Developed several Projects</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019-2023</span><br>Java Programming</li>
+                        <li><span>2024</span><br>Data Structures and Backend with Java from Coursera</li>
+                        <li><span>2023-Current</span><br>B.Tech from College Of Engineering Attingal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- services -->
+ <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                
+                <i class="fa-brands fa-figma"></i>
+                <h2>UI/UX Designer</h2>
+                <p>As a UI/UX designer, I specialize in creating intuitive and visually appealing user interfaces that enhance user experience and meet business objectives.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-android"></i>
+                <h2>App Development</h2>
+                <p>As an app developer, I specialize in creating mobile apps that deliver exceptional user experiences and meet your business objectives.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <!-- <i class="fa-solid fa-database"></i> -->
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>As a web designer, I create visually appealing and user-friendly websites that effectively communicate your message and meet your business goals.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+ </div>
+
+<!-- portfolio -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>UI/UX Designer</h3>
+                    <p>UI/UX Development using Figma</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>App Development</h3>
+                    <p>App development</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Web Development</h3>
+                    <p>Web app development</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<!-- contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>kvsudha38@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>8848XXXXXX</p>
+                <div class="social-icons">  
+                    <a href="https://github.com/Pavi-web"><i class="fa-brands fa-github"></i></a>
+                    <!-- <a href="https://www.instagram.com/sree.sree.754"><i class="fa-brands fa-instagram"></i></a>     -->
+                    <a href="https://www.linkedin.com/in/pavithra-madhusoodhanan-3b1572291/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/sree-sree-754"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © PAVI</p>
+    </div>
+</div>
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openMenu(){
+        sidemenu.style.right = "0";
+    }
+    function closeMenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+    
 </body>
 </html>
